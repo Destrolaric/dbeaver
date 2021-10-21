@@ -109,7 +109,7 @@ public class PostgreValueParser {
                 return string;
             } else {
                 if (componentType instanceof PostgreDataType) {
-                    checkAmountOfBrackets(string);
+                    // checkAmountOfBrackets(string);
                     List<Object> itemStrings = parseArrayString(string, ",");
                     return startTransformListOfValuesIntoArray(session, (PostgreDataType)componentType, itemStrings);
                 } else {
